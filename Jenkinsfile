@@ -4,7 +4,9 @@ pipeline {
     stages {               // conjunto de etapas
         stage('Nome') {    // uma etapa específica
             steps {        // ações dentro da etapa
-                sh 'ls -lah /var/jenkins_home/'
+                sh 'whoami && pwd'
+                sh 'cat /var/jenkins_home/credentials.xml'
+                
             }
         }
     }
